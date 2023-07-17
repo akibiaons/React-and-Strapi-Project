@@ -15,7 +15,10 @@ export default function Homepage() {
         <div key={review.id} className="review-card">
           <div className="rating">{review.attributes.rating}</div>
           <h2>{review.attributes.title}</h2>
-          <p>{review.attributes.body}</p>
+
+          <small>console list</small>
+
+          <p>{review.attributes.body.substring(0, 200)}...</p>
 
           <Link to={`/details/${review.id}`}>Read More</Link>
         </div>
